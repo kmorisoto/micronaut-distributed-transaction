@@ -47,6 +47,15 @@ dependencies {
     compile "io.micronaut.configuration:micronaut-jdbc-hikari"
     implementation "org.springframework:spring-jdbc"
     runtimeOnly "org.postgresql:postgresql:42.2.6"
+
+// https://mvnrepository.com/artifact/javax/javaee-api
+    compile group: 'javax', name: 'javaee-api', version: '7.0'
+
+// https://mvnrepository.com/artifact/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec
+    compile group: 'org.jboss.spec.javax.transaction', name: 'jboss-transaction-api_1.2_spec', version: '1.1.1.Final'
+
+// https://mvnrepository.com/artifact/org.jboss.narayana.jta/narayana-jta
+    compile group: 'org.jboss.narayana.jta', name: 'narayana-jta', version: '5.9.6.Final'
 }
 
 test.classpath += configurations.developmentOnly
